@@ -15,10 +15,11 @@ public class HelloController {
 	@Autowired
 	private DiscoveryClient discoveryClient;
 
+	@SuppressWarnings("deprecation")
 	@RequestMapping(path = "/hello", method = RequestMethod.GET)
 	public String hello() {
 		ServiceInstance serviceInstance = discoveryClient.getLocalServiceInstance();
-		LOG.info("/hello,hello:{},serviceId:{}", serviceInstance.getHost(), serviceInstance.getServiceId());
+		LOG.info("/hello,host:{},serviceId:{}", serviceInstance.getHost(), serviceInstance.getServiceId());
 		return "Hello,World!";
 	}
 }
