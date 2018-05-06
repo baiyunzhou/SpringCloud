@@ -7,14 +7,16 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.client.RestTemplate;
 
+import com.zby.service.HelloService;
+
 @RestController
 public class ConsumerController {
 	@Autowired
-	private RestTemplate restTemplate;
+	private HelloService helloService;
 
 	@RequestMapping(path = "/ribbon-consumer", method = RequestMethod.GET)
 	public String helloConsumer() {
-		return restTemplate.getForEntity("http://HELLO-SERVICE/hello", String.class).getBody();
+		return helloService.hello();
 	}
 
 	public static void main(String[] args) {
