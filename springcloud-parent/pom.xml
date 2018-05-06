@@ -42,5 +42,6 @@
 		<module>
 			springcloud-eureka-client-consumer-ribbon-hystrix
 		</module>
+		<module>springcloud-eureka-zuul</module>
 	</modules>
 </project>
