@@ -55,5 +55,6 @@
 			springcloud-eureka-client-consumer-ribbon-hystrix
 		</module>
 		<module>springcloud-eureka-zuul</module>
+		<module>springcloud-zookeeper</module>
 	</modules>
 </project>

@@ -6,20 +6,20 @@
 		<artifactId>springcloud-parent</artifactId>
 		<version>0.0.1-SNAPSHOT</version>
 	</parent>
-	<artifactId>springcloud-eureka-client-consumer-feign</artifactId>
+	<artifactId>springcloud-zookeeper</artifactId>
 
 	<dependencies>
 		<dependency>
 			<groupId>org.springframework.cloud</groupId>
-			<artifactId>spring-cloud-starter-eureka</artifactId>
+			<artifactId>spring-cloud-zookeeper-discovery</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.apache.curator</groupId>
+			<artifactId>curator-x-discovery</artifactId>
 		</dependency>
 		<dependency>
 			<groupId>org.springframework.cloud</groupId>
-			<artifactId>spring-cloud-starter-feign</artifactId>
-		</dependency>
-				<dependency>
-			<groupId>org.springframework.cloud</groupId>
-			<artifactId>spring-cloud-starter-netflix-ribbon</artifactId>
+			<artifactId>spring-cloud-commons</artifactId>
 		</dependency>
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
